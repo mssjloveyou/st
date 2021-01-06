@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.entity.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Timer;
@@ -11,14 +11,14 @@ import java.util.UUID;
 
 @Service
 public class TestService {
-    @Autowired
+//    @Autowired
     private TestDao dao;
 
-    @Transactional
+//    @Transactional
     public void save(){
         Test test = new Test();
         test.setName(UUID.randomUUID().toString());
-        dao.save(test);
+//        dao.save(test);
         Timer timer = new Timer();
         timer.schedule(null,1l);
         timer.notify();
@@ -26,7 +26,7 @@ public class TestService {
 
 //    @Transactional(timeout = 10)
     public Test test(){
-        List<Test> list = dao.findAll();
-        return list.get(0);
+//        List<Test> list = dao.findAll();
+        return null;
     }
 }
