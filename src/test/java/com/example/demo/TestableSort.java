@@ -7,7 +7,7 @@ public class TestableSort {
 
     @Test
     public void test(){
-        TestSort sort = new Quick();
+        TestSort sort = new Count();
         sort.test();
 
     }
